@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <database>
+    <server><!--SQL17YKF-->SQLQA11YKF</server>
+    <name>locutus</name>
+    <creds>MGZSMnxCNH13J0huNnk1TCRZbSY3OT5Bb73FcXBpbWNiZQ==</creds>
+    <port>1433</port>
+    <driver>SQL Server Native Client 10.0</driver>
+  </database>
+</config>

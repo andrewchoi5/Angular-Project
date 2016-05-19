@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+		
+		<!--link rel="shortcut icon" href="favicon.ico" type="image/x-icon"-->
+		<!--link rel="icon" href="favicon.ico" type="image/x-icon"-->
+
+    <title>Capacity Planning Tool</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+		
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+		
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">		
+		
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		
+		<script type="text/javascript" src="ajax-request.js"></script>
+		<script type="text/javascript" src="cpt-datagetter.js"></script>
+		<script type="text/javascript" src="cpt.js"></script>
+		
+		
+		<script type="text/javascript">
+		<!--
+
+		var previous = window.onload;
+
+		if (typeof(previous) != 'function') window.onload = init;
+		else window.onload = function() { previous(); init(); }
+
+		// Handler
+		function init()
+		{
+			//this is compatibility stuff for IE7. indexOf doesn't work in IE7
+			if(!Array.prototype.indexOf) 
+			{
+				Array.prototype.indexOf = function(obj, start) {
+					for (var i = (start || 0), j = this.length; i < j; i++) {
+					if (this[i] === obj) { return i; }
+				 }
+				 return -1;
+				}
+			}
+			
+			try
+			{
+				//CPT.checkAdmin(isAdmin, false);
+			}
+			catch (e) { alert('Error: ' + e.message); } 
+		}
+
+		//-->
+		</script>		
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/cpt/">Capacity Planning Tool</a>
+        </div>
+        <!--div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-right" role="form" onsubmit="return false;">
+            <div class="form-group">
+							<div>
+								<input type="text" autocomplete="off" placeholder="Search" class="form-control searchbox" id="searchvalue" onkeyup="showSearchSuggestions(this.value)">
+							</div>
+							<div class="searchresults" id="searchresults"></div>
+						</div>						
+          </form>				
+          <ul class="nav navbar-nav">
+						<li class="active"><a href="/sml/">Home</a></li>
+            <li class="active"><a href="/sml/releases.html">Releases</a></li>
+						<li class="active" id="admin"></li>
+          </ul> 
+        </div--><!--/.nav-collapse -->
+      </div>
+    </div>
+		
+		<!-- spacer -->
+		<div class="container" style="height: 25px;"></div>
+		
+		<div class="container">
+			<div class="panel panel-default">
+				<div class="panel-heading">Stuff</div>
+				<div class="panel-body" id='deliverableNavigator'></div>
+			</div>
+		</div>
+		
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">BlackBerry Internal Use Only</p>
+      </div>
+    </div>
+	
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jquery/jquery-2.0.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
